@@ -1,98 +1,151 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité - Rentini</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f3f3f3;
-      padding: 20px;
-      color: #333;
-    }
-    h1, h2 {
-      color: #000000ff;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    h2 {
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 15px;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .project-content p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .project-demo button {
+            padding: 10px 20px;
+            background-color: #1e3a8a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-demo button:hover {
+            background-color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Politique de Confidentialité - Rentini</h1>
 
-    <p>Bienvenue sur Rentini ! Nous attachons une grande importance à la confidentialité de vos informations. Cette politique explique comment nous collectons, utilisons et protégeons vos données.</p>
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my projects and see demos in action!</p>
+</header>
 
-    <h2>1. À propos de Rentini</h2>
-    <p>Rentini est une application mobile qui permet aux utilisateurs de publier et de rechercher des biens à louer (maisons, appartements, studios, cabinets, villas, espaces commerciaux comme cafés ou boulangeries). Seuls les utilisateurs souhaitant publier un bien doivent créer un compte et peuvent payer pour certains services via Google Play. La recherche et la consultation sont gratuites pour tous les autres utilisateurs.</p>
+<!-- Projects Section -->
+<div class="projects">
+    <div class="project-card">
+        <img src="tvss.png" alt="TVS Project" class="project-image">
+        <div class="project-content">
+            <h3>TVS Project</h3>
+            <p>An educational visual platform specialized E-Learning between professional Trainers , Teachers and Students. In this platform you will be able to get a successful online courses that can help you improve your professional career</p>
+            <div class="project-demo">
+                <button onclick="runTVSDemo()">Run Demo</button>
+            </div>
+        </div>
+    </div>
 
-    <h2>2. Informations collectées</h2>
-    <p>Lorsque vous publiez un bien ou créez un compte, nous collectons :</p>
-    <ul>
-      <li>Nom d'utilisateur</li>
-      <li>Adresse</li>
-      <li>Numéro de téléphone</li>
-      <li>Adresse e-mail</li>
-    </ul>
-    <p>Nous n’utilisons pas de cookies pour le suivi et ne partageons pas vos informations personnelles à des tiers à des fins commerciales.</p>
+    <div class="project-card">
+        <img src="logo2.png" alt="BTRE Real Estate" class="project-image">
+        <div class="project-content">
+            <h3>BTRE Real Estate</h3>
+            <p>A platform for searching and buying properties, with user authentication and search functionality for an interactive experience.</p>
+            <div class="project-demo">
+                <button onclick="runBTREDemo()">Run Demo</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <h2>3. Paiements</h2>
-    <p>Les paiements pour publier des annonces passent uniquement via Google Play Billing. Rentini n’a pas accès aux informations de paiement sensibles.</p>
+<footer>
+    <p>&copy; 2025 Abdessttar Ghabi. All Rights Reserved.</p>
+</footer>
 
-    <h2>4. Suppression de votre compte et de vos données</h2>
-    <p>Si vous souhaitez supprimer votre compte et toutes les données associées :</p>
-    <ol>
-      <li>Envoyez un e-mail à <a href="mailto:rentinigroup@gmail.com">rentinigroup@gmail.com</a> avec la demande de suppression.</li>
-      <li>Indiquez clairement le nom d’utilisateur ou l’adresse e-mail associée à votre compte.</li>
-    </ol>
-    <p>Nous supprimerons toutes vos informations personnelles de nos systèmes dans un délai de 3 jours après réception de votre demande. Cela inclut :</p>
-    <ul>
-      <li>Nom d'utilisateur</li>
-      <li>Adresse</li>
-      <li>Numéro de téléphone</li>
-      <li>Adresse e-mail</li>
-      <li>Toutes les annonces publiées par votre compte</li>
-    </ul>
+<script>
+    function runTVSDemo() {
+        alert("TVS demo is running. (This is a placeholder for your demo implementation)");
+    }
 
-    <h2>5. Protection des enfants</h2>
-    <p>Rentini peut être utilisé par tous, y compris les enfants de moins de 13 ans. Nous ne collectons pas volontairement d’informations personnelles auprès des enfants sans consentement parental. Les parents ou tuteurs peuvent nous contacter pour supprimer les informations de leur enfant.</p>
+    function runBTREDemo() {
+        window.open('http://54.86.75.17')
+    }
+</script>
 
-    <h2>6. Sécurité</h2>
-    <p>Nous prenons des mesures techniques et organisationnelles pour protéger vos données contre la perte, le vol ou l’accès non autorisé.</p>
-
-    <h2>7. Modifications de cette politique</h2>
-    <p>Nous pouvons mettre à jour cette politique à tout moment. Les modifications seront publiées sur cette page avec la date de mise à jour.</p>
-
-    <h2>8. Contact</h2>
-    <p>Pour toute question ou demande concernant votre vie privée, vous pouvez nous contacter à <a href="mailto:rentinigroup@gmail.com">rentinigroup@gmail.com</a>.</p>
-  </div>
 </body>
 </html>
-
-
